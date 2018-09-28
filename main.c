@@ -72,7 +72,7 @@ void rthRead()
 	char readValue = 0;
 	for(i; i < 5; i ++)
 	{
-		for(y; y < 8; y++)
+		for(y=0; y < 8; y++)
 		{
 			readValue = TEMP;
 			while(TEMP != 1)
@@ -199,6 +199,7 @@ void main (void)
 	
   while (1)
   {
+			emptyBuff(res,5);
 			rthInit();
 			rthRead();
 			sendRes();
